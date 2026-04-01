@@ -62,14 +62,23 @@
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
-        mmv {
+        lt: layer_tap {
+            display-name = "layer_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
+	mmv {
             acceleration-exponent = <1>;      // 1
-            time-to-max-speed-ms = <300>;    // 40
+            time-to-max-speed-ms = <50>;      // 40
             delay-ms = <0>;                   // 0
         };
         msc {
             acceleration-exponent = <0>;      // 0
-            time-to-max-speed-ms = <40>;      // 500
+            time-to-max-speed-ms = <50>;      // 500
             delay-ms = <0>;                   // 10
         };
     };
